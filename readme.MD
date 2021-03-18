@@ -16,3 +16,5 @@ Prepara la app para que tenga dos rutas con dos páginas distintas. Una ruta ser
 - Haz que cuando el usuario haga clic en el número de línea que aparece en el display, vaya a la página de información de línea.
 - En la nueva página, si se hace clic en "Volver" debe volver a la página principal de parada.
 - Prepara también una página para cuando la ruta solicitada no se encuentre.
+
+Para ver un mapa de Google Maps a partir de unas coordenadas: http://maps.google.com/maps?z=19&t=m&q=loc:COORDENADA1+COORDENADA2
