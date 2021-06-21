@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import { ContextoGeneral } from "../contexts/ContextoGeneral";
+
 export const NumeroParada = () => {
-  return <h1>Parada nº 15</h1>;
+  const { titulo } = useContext(ContextoGeneral);
+  return <h1>{titulo}</h1>;
 };

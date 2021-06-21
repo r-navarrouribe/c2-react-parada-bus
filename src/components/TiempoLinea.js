@@ -1,3 +1,11 @@
+import { useContext } from "react";
+import { ContextoGeneral } from "../contexts/ContextoGeneral";
+
 export const TiempoLinea = () => {
-  return <h2>Tiempo para la línea 60: 2 minutos</h2>;
+  const { tiempoLinea, numeroLinea } = useContext(ContextoGeneral);
+  return (
+    <h2>
+      Tiempo para la línea {numeroLinea}: {tiempoLinea}
+    </h2>
+  );
 };

@@ -1,21 +1,18 @@
+import PropTypes from "prop-types";
+import { useContext, useState } from "react";
+import { ContextoGeneral } from "../contexts/ContextoGeneral";
+
 export const Display = () => {
+  const { arrayParadas } = useContext(ContextoGeneral);
   return (
     <div className="display">
-      <div className="bus">
-        <span className="linea">V16</span>
-        <span className="destino">Universitat</span>
-        <span className="tiempo">10min</span>
-      </div>
-      <div className="bus">
-        <span className="linea">H12</span>
-        <span className="destino">Pla de Palau</span>
-        <span className="tiempo">1min</span>
-      </div>
-      <div className="bus">
-        <span className="linea">32</span>
-        <span className="destino">Barceloneta</span>
-        <span className="tiempo">4min</span>
-      </div>
+      {arrayParadas.map((parada) => (
+        <div className="bus" key={parada.routeId}>
+          <span className="linea">{parada.line}</span>
+          <span className="destino">{parada.destination}</span>
+          <span className="tiempo">{parada["text-ca"]}</span>
+        </div>
+      ))}
     </div>
   );
 };
